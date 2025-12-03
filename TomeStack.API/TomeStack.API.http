@@ -1,0 +1,6 @@
+@TomeStack.API_HostAddress = http://localhost:5119
+
+GET {{TomeStack.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

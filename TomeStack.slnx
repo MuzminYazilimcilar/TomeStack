@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Core/">
+    <Project Path="Core/TomeStack.Application/TomeStack.Application.csproj" />
+    <Project Path="Core/TomeStack.Domain/TomeStack.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/TomeStack.Infrastructure/TomeStack.Infrastructure.csproj" />
+    <Project Path="Infrastructure/TomeStack.Persistence/TomeStack.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/Presentation/">
+    <Project Path="TomeStack.API/TomeStack.API.csproj" />
+  </Folder>
+</Solution>
