@@ -12,7 +12,7 @@ using TomeStack.Persistence;
 namespace TomeStack.Persistence.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20251203134630_InitialCreate")]
+    [Migration("20251205001812_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -220,9 +220,7 @@ namespace TomeStack.Persistence.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<bool>("UserIsActive")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(true);
+                        .HasColumnType("boolean");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256)

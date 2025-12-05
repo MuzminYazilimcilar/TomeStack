@@ -217,9 +217,7 @@ namespace TomeStack.Persistence.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<bool>("UserIsActive")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(true);
+                        .HasColumnType("boolean");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256)

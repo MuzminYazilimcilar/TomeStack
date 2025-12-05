@@ -1,18 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TomeStack.Domain.Entities;
-using TomeStack.Domain.Values;
 
 namespace TomeStack.Persistence
 {
     public class ProjectDbContext : IdentityDbContext<User>
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public ProjectDbContext(DbContextOptions<ProjectDbContext> options) : base(options)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Database=TomeStack;Username=postgres;Password=112158");
         }
 
 
@@ -35,8 +30,7 @@ namespace TomeStack.Persistence
                 .IsRequired();
 
                 entity.Property(e => e.UserIsActive)
-                .IsRequired()
-                .HasDefaultValue(true);
+                .IsRequired();
             });
         }
     }
